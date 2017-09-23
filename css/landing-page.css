@@ -9,6 +9,30 @@ body, html {
   height: 100%;
 }
 
+/*.carousel-indicators {
+  background-color: #ff0000 !important;
+}*/
+#show1, #show2, #show3 {
+  display: none;
+}
+.active{
+    background-color: #000000 !important;
+}
+.notactive {
+  background-color: blue !important;
+}
+.carousel-control-next-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-prev-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    transform: rotate(180deg);
+}
+.carousel-inner {
+  height: 400px !important;
+}
+
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -19,7 +43,7 @@ body, h1, h2, h3, h4, h5, h6 {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(../img/intro-bg.jpg) no-repeat center center;
+  background: url(../img/redgray.jpg) no-repeat center center;
   background-size: cover;
 }
 
