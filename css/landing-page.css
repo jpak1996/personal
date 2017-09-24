@@ -16,15 +16,20 @@ body, html {
   display: none;
 }
 #profile_pic_container {
-  display: none;
-  height: 400px;
-  width: 400px;
+  max-height: 400px;
+  max-width: 400px;
 }
 #profile_pic {
   object-fit: cover;
-  object-position: 0% 10%;
+  display: none;
   height: 400px;
   width: 400px;
+  object-position: 0% 10%;
+}
+
+#profile_pic:hover {
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  /*transform: scale(0.95);*/
 }
 
 .carousel-caption {
@@ -38,10 +43,12 @@ body, html {
   top: auto;
   color: #34495E !important;
   background-color: #f8f8f8;
+  
 }
 #carouselExampleIndicators {
   outline-style: double;
-  outline-width: 2px;
+  outline-width: 1px;
+  outline-color: #979A9A;
 }
 
 #carouselExampleIndicators ol li {
