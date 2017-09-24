@@ -9,29 +9,63 @@ body, html {
   height: 100%;
 }
 
-/*.carousel-indicators {
-  background-color: #ff0000 !important;
-}*/
+.carousel-inner {
+  background-color: #f8f8f8;
+}
 #show1, #show2, #show3 {
   display: none;
 }
-.active{
-    background-color: #000000 !important;
+#profile_pic_container {
+  display: none;
+  height: 400px;
+  width: 400px;
 }
-.notactive {
-  background-color: blue !important;
-}
-.carousel-control-next-icon {
-    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-.carousel-control-prev-icon {
-    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-    transform: rotate(180deg);
-}
-.carousel-inner {
-  height: 400px !important;
+#profile_pic {
+  object-fit: cover;
+  object-position: 0% 10%;
+  height: 400px;
+  width: 400px;
 }
 
+.carousel-caption {
+  bottom: 0;
+  top: auto;
+  color: #F0F3F4 !important;
+}
+
+#black_text_caption {
+  bottom: 0;
+  top: auto;
+  color: #34495E !important;
+  background-color: #f8f8f8;
+}
+#carouselExampleIndicators {
+  outline-style: double;
+  outline-width: 2px;
+}
+
+#carouselExampleIndicators ol li {
+  opacity: 0.5;
+  background-color: #B3B6B7 !important;
+}
+#carouselExampleIndicators ol .active{
+  opacity: 0.75;
+  background-color: #2ECC71 !important;
+}
+
+.carousel-control-next-icon {
+  background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-prev-icon {
+  background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  transform: rotate(180deg);
+}
+
+.carousel-item img {
+  height: 500px;
+  width: auto;
+  margin: 0 auto;
+}
 
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;

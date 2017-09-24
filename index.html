@@ -35,6 +35,7 @@
       $("#button3").click(function() {
         $("#show3").slideToggle("slow");
       });
+      $("#profile_pic_container").fadeIn();
     });
     function changeText(elem) {
       var val = elem.innerHTML;
@@ -44,6 +45,26 @@
       else {
         elem.innerHTML = "More info";
       }
+    }
+    
+    function changeImage(elem) {
+        var val = $(elem).attr('src');
+        if (val=="img/mountain.jpg") {
+          $(elem).fadeOut(function() {
+            elem.src = 'img/snake.jpg';
+            $(elem).fadeIn();
+          });
+          $("#pic_caption").text("Me chillin' with the snake sis.");
+        }
+        else {
+          $(elem).fadeOut(function() {
+            elem.src = 'img/mountain.jpg';
+            $(elem).fadeIn();
+          });
+          $("#pic_caption").text("A picture of relief on the way down from Mount Diablo.");
+        }
+        
+        
     }
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -108,8 +129,38 @@
       </div>
     </header>
 
+    <!-- intro -->
+    <section id="about" class="content-section-b">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 ml-auto">
+            <h1>About Me</h1>
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <p>Hi, nice to meet you! The name's Chris, and I'm currently pursuing my Bachelor's in Computer Science at UCLA.
+              <br/><br/>
+              I like to think of myself as someone who is always striving to better himself, in terms of my career but also my
+              life choices. As a result, problem-solving and critical thinking have been key tools in my journey thus far.
+              <br/><br/>
+            Challenges that I face on a daily basis pique my interest, and I've
+            been blessed with the opportunity to create cleanly compiled solutions in a fast-paced environment
+            with the help of highly skilled peers and mentors through a collaborative, team effort.<br/><br/>
+            For a quick introduction to how I tackled my problems, read about my project experience below!
+          </p>
+          </div>
+          <div class="col-lg-6 ml-auto">
+            <div id="profile_pic_container">
+              <img id="profile_pic" onclick="changeImage(this)" class="d-block img-fluid" src="img/mountain.jpg" alt="Picture at Mount Diablo">
+              <p id="pic_caption" align="right" class="text-muted small">A picture of relief on the way down from Mount Diablo.</p>
+            </div>
+          </div>
+        </div><!-- container -->
+      </div><!-- row -->
+    </section>
+    <!-- /intro -->
+
     <!-- Page Content -->
-    <section class="content-section-a">
+    <section id="projects" class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 ml-auto">
@@ -117,7 +168,7 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <h4 class="section-heading">Automating a tournament bracket</h4>
-            <button onclick="changeText(this)" id="button1" type="button" class="btn btn-primary">More info</button>
+            <div><button onclick="changeText(this)" id="button1" type="button" class="btn btn-primary">More info</button><br/><br/></div>
             
           </div>
           <div class="col-lg-8 mr-auto">
@@ -130,16 +181,17 @@
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                   <img class="d-block img-fluid" src="https://puu.sh/xFy0z/a2ea289e44.png" alt="First slide">
-                  <div class="carousel-caption">A 34-man bracket that was run with SmashTime.</div>
+                  <div class="carousel-caption">A 34-person bracket that was run with the help of  SmashTime.</div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="img/smashtime_text.png" alt="Third slide">
+                  <div id="black_text_caption" class="carousel-caption">The texts that users receive when their match is queued.<br/></br/></div>
                 </div>
                 <div class="carousel-item">
                   <img class="d-block img-fluid" src="img/smash2.jpg" alt="Second slide">
                   <div class="carousel-caption">The Smash community at UCLA.</div>
                 </div>
-                <div class="carousel-item">
-                  <img class="d-block img-fluid" src="img/smashtime_text.png" alt="Third slide">
-                  <div class="carousel-caption">The texts that users receive when their match is queued up.</div>
-                </div>
+                
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -172,7 +224,7 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <h2 class="section-heading">A creative display of my personal projects and achievments.</h2>
-            <button onclick="changeText(this)" id="button2" type="button" class="btn btn-primary">More info</button>
+            <div><button onclick="changeText(this)" id="button2" type="button" class="btn btn-primary">More info</button><br/><br/></div>
           </div>
           
           <div class="col-lg-8 ml-auto order-lg-1">
@@ -203,7 +255,7 @@
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <h2 class="section-heading">An easy way to keep track of schedule.</h2>
-            <button onclick="changeText(this)" id="button3" type="button" class="btn btn-primary">More info</button>
+            <div><button onclick="changeText(this)" id="button3" type="button" class="btn btn-primary">More info</button><br/><br/></div>
           </div>
           <div class="col-lg-5 mr-auto ">
             <img class="img-fluid" src="img/calendar.png" alt="">
@@ -220,43 +272,6 @@
     </section>
     <!-- /.content-section-a -->
 
-    <aside class="banner">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <h2>Connect to Start Bootstrap:</h2>
-          </div>
-          <div class="col-lg-6 my-auto">
-            <ul class="list-inline banner-social-buttons">
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-twitter fa-fw"></i>
-                  <span class="network-name">Twitter</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-github fa-fw"></i>
-                  <span class="network-name">Github</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-linkedin fa-fw"></i>
-                  <span class="network-name">Linkedin</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-    </aside>
-    <!-- /.banner -->
 
     <!-- Footer -->
     <footer>
@@ -271,14 +286,14 @@
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#contact">Contact</a>
+            <a href="#">Contact</a>
           </li>
         </ul>
-        <p class="copyright text-muted small">Copyright &copy; Your Company 2017. All Rights Reserved</p>
+        <!-- <p class="copyright text-muted small">Copyright &copy; Your Company 2017. All Rights Reserved</p> -->
       </div>
     </footer>
 
