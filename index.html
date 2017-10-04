@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -37,24 +37,24 @@
       });
       $("#profile_pic").fadeIn();
     });
-    function changeText(elem) {
-      var val = elem.innerHTML;
-      if (val=="More info") {
-        elem.innerHTML = "Less info";
+      function changeText(elem) {
+        var val = elem.innerHTML;
+        if (val=="More info") {
+          elem.innerHTML = "Less info";
+        }
+        else {
+          elem.innerHTML = "More info";
+        }
       }
-      else {
-        elem.innerHTML = "More info";
-      }
-    }
-    
-    function changeImage(elem) {
+      
+      function changeImage(elem) {
         var val = $(elem).attr('src');
         if (val=="img/mountain.jpg") {
           $(elem).fadeOut(function() {
-            elem.src = 'img/snake.jpg';
+            elem.src = 'img/drum.jpg';
             $(elem).fadeIn();
           });
-          $("#pic_caption").text("Me chillin' with the snake sis.");
+          $("#pic_caption").text("With world-class drummer Ralph Nader at the Rose Bowl!");
         }
         else {
           $(elem).fadeOut(function() {
@@ -62,10 +62,22 @@
             $(elem).fadeIn();
           });
           $("#pic_caption").text("A picture of relief on the way down from Mount Diablo.");
-        }
-        
-        
-    }
+        }  
+      }
+      
+      // var current = 0;
+      // var background = ['img/Montrose.jpg', 'img/lacrescenta.jpg'];
+      // function changeBackground(elem) {
+      //   if (current==0) {
+      //     elem.css('background', background[current]);
+      //     current=1;
+      //   }
+      //   else {
+      //     elem.css('background', background[current]);
+      //     current=0;
+      //   }
+      //   
+      // }
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -101,12 +113,12 @@
     <header class="intro-header">
       <div class="container">
         <div class="intro-message">
-          <h1>Chris Pak</h1>
-          <h4>Does it smell like up-dog in here?</h4>
+          <h1 id="myname">Chris Pak</h1>
+          <h4 id="quote">Does it smell like up-dog in here?</h4>
           <hr class="intro-divider">
           <ul class="list-inline intro-social-buttons">
             <li class="list-inline-item">
-              <a href="img/ChrisPak.pdf" class="btn btn-secondary btn-lg" target="_blank">
+              <a href="img/resume.pdf" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-address-card-o fa-fw"></i>
                 <span class="network-name">Resume</span>
               </a>

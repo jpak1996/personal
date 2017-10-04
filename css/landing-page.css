@@ -28,7 +28,7 @@ body, html {
 }
 
 #profile_pic:hover {
-  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow:0 10px 16px 2px rgba(0,0,0,0.2);
   /*transform: scale(0.95);*/
 }
 
@@ -83,12 +83,17 @@ body, h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  color: #f8f8f8;
-  background: url(../img/redgray.jpg) no-repeat center center;
+  color: #2E4053;
+  background: url(../img/lacrescenta.jpg) no-repeat center center;
   background-size: cover;
 }
 
+#quote, #myname {
+  text-shadow: 3px 3px 5px #1C2833;
+
+}
 .intro-message {
+  color: #ffffff;
   position: relative;
   padding-top: 20%;
   padding-bottom: 20%;
